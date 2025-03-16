@@ -15,7 +15,7 @@ public class Telemetry {
     public Telemetry(String oxygenLevel) {
         this.id = "T" + dateFormatter();
         this.date = new Date();
-        this.oxygenLevel = oxygenLevel;
+        this.oxygenLevel = oxygenLevel + "%";
     }
 
     public String dateFormatter() {
