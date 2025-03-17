@@ -1,9 +1,10 @@
 package asha9236.example;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class BranchNode extends TreeNode {
-    ArrayList<TreeNode> children;
+    private ArrayList<TreeNode> children;
 
 //CONSTRUCTORS//////////////////////////////////////////////////////////////////////////////////////////////////////////
     public BranchNode (String value) { //base constructor
@@ -60,5 +61,32 @@ public class BranchNode extends TreeNode {
             }
         }
         return null;
+    }
+
+//BASE METHODS//////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public ArrayList<TreeNode> getChildren() {
+        return children;
+    }
+
+    public void setChildren(ArrayList<TreeNode> children) {
+        this.children = children;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        BranchNode that = (BranchNode) o;
+        return Objects.equals(children, that.children);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(children);
+    }
+
+    @Override
+    public String toString() {
+        return "BRANCH " + value +
+                "\n    Children : " + children;
     }
 }
