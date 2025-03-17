@@ -1,5 +1,8 @@
 package asha9236.example;
 
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -8,7 +11,7 @@ public class LeafNode extends TreeNode {
 
 //CONSTRUCTORS//////////////////////////////////////////////////////////////////////////////////////////////////////////
     public LeafNode (Values data) { //base constructor
-        this.value = value;
+        this.value = dateFormatter();
         this.data = data;
     }
 
@@ -17,10 +20,24 @@ public class LeafNode extends TreeNode {
     public boolean isLeaf() { //returns true because leaf nodes only hold information
         return true;
     }
+
 //HELPER METHODS////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //none lol
+    public String dateFormatter () {
+        //since we are in space : need to specify the time zone
+        ZonedDateTime now = ZonedDateTime.now(ZoneId.of("America/New_York"));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd.HHmmssSSS");
+        String formattedDate = now.format(formatter);
+
+        return formattedDate;
+    }
 
 //BASE METHODS//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    public void setData(Values data) {
+        this.data = data;
+    }
+
     public Values getData() {
         return data;
     }

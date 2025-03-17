@@ -8,7 +8,6 @@ public class Sensor extends Values {
 
 //CONSTRUCTOR///////////////////////////////////////////////////////////////////////////////////////////////////////////
     public Sensor (String temperature) {
-        this.id = "S" + dateFormatter();
         this.date = new Date();
         this.temperature = temperature + "°C";
     }
@@ -37,7 +36,7 @@ public class Sensor extends Values {
 
     @Override
     public String toString() {
-        return "SENSOR " + id +
+        return "SENSOR " +
                 "\n    " + date +
                 "\n    temperature : " + temperature;
     }

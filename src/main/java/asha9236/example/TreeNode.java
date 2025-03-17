@@ -12,4 +12,12 @@ public abstract class TreeNode {
     }
 
     public abstract boolean isLeaf ();
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
 }

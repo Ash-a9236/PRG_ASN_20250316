@@ -9,7 +9,6 @@ public class Log extends Values {
 
 //CONSTRUCTOR///////////////////////////////////////////////////////////////////////////////////////////////////////////
     public Log (String crewMember, String message) {
-        this.id = "L" + dateFormatter();
         this.crewMember = crewMember;
         this.date = new Date();
         this.message = message;
@@ -48,7 +47,7 @@ public class Log extends Values {
 
     @Override
     public String toString() {
-        return "LOG " + id +
+        return "LOG " +
                 "\n    " + date +
                 "\n    Crew Member : " + crewMember +
                 "\n    Message : " + message;

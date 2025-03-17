@@ -8,7 +8,6 @@ public class Telemetry extends Values {
 
 //CONSTRUCTOR///////////////////////////////////////////////////////////////////////////////////////////////////////////
     public Telemetry(String oxygenLevel) {
-        this.id = "T" + dateFormatter();
         this.date = new Date();
         this.oxygenLevel = oxygenLevel + "%";
     }
@@ -38,7 +37,7 @@ public class Telemetry extends Values {
 
     @Override
     public String toString() {
-        return "TELEMETRY " + id +
+        return "TELEMETRY " +
                 "\n    " + date +
                 "\n    Oxygen level : " + oxygenLevel;
     }
