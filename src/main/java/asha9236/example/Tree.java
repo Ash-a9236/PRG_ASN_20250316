@@ -154,7 +154,7 @@ public class Tree {
         // Recursively print children (only for internal nodes)
         if (!node.isLeaf()) {
             BranchNode branch = (BranchNode) node;
-            for (TreeNode child : BranchNode.children) {
+            for (TreeNode child : branch.getChildren()) {
                 printTree(child, depth + 1);
             }
         }
