@@ -1,75 +1,7 @@
 Project information :
 
-You are the lead engineer of a top-secret project for a space agency. The agency is preparing for a long-duration manned
-mission to explore a distant planet. As part of your responsibility, you need to design a system to store and manage
-vital mission data, including sensor readings, telemetry, and crew logs.
+The data structure I choose was a N-ary tree structure to better organize the data for retrival later on. The insertion
+and deletion is longer but the retrieval of the data is fast since the tree has a fixed depth and the children are kept
+in an arrayList, which has a complexity of O(n)
 
-Because space missions have unique challenges, the system you design must allow efficient storage and retrieval of data
-while handling potential data errors or inconsistencies caused by communication interference or delays.
-
-Your task is to design and implement a mission data management system using a suitable data structure in Java.
-
-Requirements:
-
-Your program should include the following:
-    1. A Data Structure for Storing Mission Data:
-        o You need to select a suitable data structure (e.g., HashMap, Linked List, or Tree, etc.) to store mission data.
-        o The data structure should allow fast access, insertion, and deletion of mission data.
-
-    2. Methods for Data Management: (Your program must include the following functionalities)
-        o Insert Data: Store new mission data, ensuring each piece of data has a unique identifier.
-        o Retrieve Data: Allow users to search for a specific mission data entry using its identifier.
-        o Delete Data: Remove a data entry from the system when it is no longer needed.
-
-    3. Handling Errors and Inconsistencies:
-        o The system should prevent duplicate data entries with the same identifier.
-        o If a user tries to retrieve or delete data that does not exist, the system should provide an appropriate message.
-        o Consider implementing a way to detect and correct corrupted data, such as using timestamps or validation checks.
-
-    4. Explanation of Your Design Choices:
-        o After implementing the system, provide a written explanation of why you chose the specific data structure and
-        how it helps in managing mission data.
-        o Discuss how your system handles the unique challenges of space communication, such as delayed or lost data.
-
-    Note: You can explain your answer in a separate file (.txt or pdf file) and submit it together with the other À
-    submissions, OR you can write your explanation as comments in your current java files.
-
-    5. Analysis of the Algorithm’s Efficiency:
-        o Analyze the time complexity of your data structure’s operations (insertion, retrieval, and deletion).
-
-
-TO DO LIST
-    1. make the base files (crew log, sensor reading, telemetry)
-    2. make unique identifier for each base file IN DATE ORDER
-    3. Chose data structure (probably tree or hashmap) > new class MANAGER
-    4. implement data structure
-    5. make insert, retrieve, & delete methods
-    6. Error checking
-    7. Corruption checking
-
-
-
-INPUT EX
-
-I : Insert: (ID: "001", Type: "Telemetry", Value: "Oxygen Level: 98%", Timestamp: 1710000000)
-O : Data inserted successfully
-
-I : Insert: (ID: "002", Type: "Sensor", Value: "Temperature: -40°C", Timestamp: 1710000100)
-O : Data inserted successfully
-
-I : Insert: (ID: "001", Type: "Telemetry", Value: "Duplicate Entry", Timestamp: 1710000200)
-O : Error: Duplicate ID detected. Data not inserted
-
-I : Retrieve: "001"
-O : Retrieved: [ID: 001, Type: Telemetry, Value: Oxygen Level: 98%, Time: 1710000000]
-
-I : Retrieve: "003"
-O : Data not found for ID: 003
-
-I : Delete: "002"
-O : Data with ID: 002 deleted
-
-I : Retrieve Oldest Data
-O : Oldest Data: [ID: 001, Type: Telemetry, Value: Oxygen Level: 98%, Time: 1710000000]
-
-
+My tree has therefore an overall complexity of O(n) since each levels has the same complexity.

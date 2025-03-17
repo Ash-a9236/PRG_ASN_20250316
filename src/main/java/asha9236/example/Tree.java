@@ -35,6 +35,7 @@ public class Tree {
         }
 
         current.addChild(new LeafNode(data)); //add the leaf node
+        System.out.println("Data inserted successfully");
     }
 
     /**
