@@ -1,15 +1,10 @@
 package asha9236.example;
 
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Objects;
 
-public class Log {
-    private String id;
+public class Log extends Values {
     private String crewMember;
-    private Date date;
     private String message;
 
 //CONSTRUCTOR///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -20,20 +15,7 @@ public class Log {
         this.message = message;
     }
 
-    public String dateFormatter () {
-        //since we are in space : need to specify the time zone
-        ZonedDateTime now = ZonedDateTime.now(ZoneId.of("America/New_York"));
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd.HHmmssSSS");
-        String formattedDate = now.format(formatter);
-
-        return formattedDate;
-    }
-
 //BASE METHODS//////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    public String getId() {
-        return id;
-    }
 
     public String getCrewMember() {
         return crewMember;
@@ -41,10 +23,6 @@ public class Log {
 
     public void setCrewMember(String crewMember) {
         this.crewMember = crewMember;
-    }
-
-    public Date getDate() {
-        return date;
     }
 
     public String getMessage() {
@@ -58,14 +36,14 @@ public class Log {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
         Log log = (Log) o;
-        return Objects.equals(id, log.id) && Objects.equals(crewMember, log.crewMember)
-                && Objects.equals(date, log.date) && Objects.equals(message, log.message);
+        return Objects.equals(crewMember, log.crewMember) && Objects.equals(message, log.message);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, crewMember, date, message);
+        return Objects.hash(super.hashCode(), crewMember, message);
     }
 
     @Override
