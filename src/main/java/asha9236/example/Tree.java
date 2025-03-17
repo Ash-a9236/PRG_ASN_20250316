@@ -162,4 +162,11 @@ public class Tree {
 
 //BASE METHODS//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    public BranchNode getRoot() {
+        return root;
+    }
+
+    public void setRoot(BranchNode root) {
+        this.root = root;
+    }
 }
