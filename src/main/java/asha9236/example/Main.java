@@ -7,18 +7,18 @@ public class Main {
 //BASE DATA/////////////////////////////////////////////////////////////////////////////////////////////////////////////
         Tree fileSystem = new Tree();
 
-        fileSystem.insertData(new Log("John Doe", "random message"));
-        fileSystem.insertData(new Log("Jane Smith", "Everything is running smoothly."));
+        fileSystem.insertData(new Log("John Doe",      "random message"));
+        fileSystem.insertData(new Log("Jane Smith",    "Everything is running smoothly."));
         fileSystem.insertData(new Log("Alice Johnson", "Detected minor fluctuations in power supply."));
-        fileSystem.insertData(new Log("Bob Brown", "Performing routine maintenance on engine systems."));
+        fileSystem.insertData(new Log("Bob Brown",     "Performing routine maintenance on engine systems."));
         fileSystem.insertData(new Log("Charlie Davis", "Initiating communication with ground control."));
-        fileSystem.insertData(new Log("Diana Evans", "Completed system diagnostics, all systems nominal."));
-        fileSystem.insertData(new Log("Ethan Harris", "Preparing for scheduled spacewalk."));
-        fileSystem.insertData(new Log("Fiona Clark", "Monitoring external temperature changes."));
-        fileSystem.insertData(new Log("George Lewis", "Adjusting life support systems for optimal performance."));
+        fileSystem.insertData(new Log("Diana Evans",   "Completed system diagnostics, all systems nominal."));
+        fileSystem.insertData(new Log("Ethan Harris",  "Preparing for scheduled spacewalk."));
+        fileSystem.insertData(new Log("Fiona Clark",   "Monitoring external temperature changes."));
+        fileSystem.insertData(new Log("George Lewis",  "Adjusting life support systems for optimal performance."));
         fileSystem.insertData(new Log("Hannah Walker", "Recording astronomical data from telescope."));
-        fileSystem.insertData(new Log("Ian Hall", "Reviewing navigation coordinates for next maneuver."));
-        fileSystem.insertData(new Log("John Doe", "random message"));
+        fileSystem.insertData(new Log("Ian Hall",      "Reviewing navigation coordinates for next maneuver."));
+        fileSystem.insertData(new Log("John Doe",      "random message"));
 
         fileSystem.insertData(new Sensor("25"));
         fileSystem.insertData(new Sensor("22"));

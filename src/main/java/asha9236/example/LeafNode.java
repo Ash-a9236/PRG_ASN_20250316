@@ -11,7 +11,8 @@ public class LeafNode extends TreeNode {
 
 //CONSTRUCTORS//////////////////////////////////////////////////////////////////////////////////////////////////////////
     public LeafNode (Values data) { //base constructor
-        this.value = dateFormatter();
+        super();//takes care of the nullPointerException
+        this.value = "" + dateFormatter(); //for some reason inserts a null instead of formatting the value : is the only one that doesnt work
         this.data = data;
     }
 
