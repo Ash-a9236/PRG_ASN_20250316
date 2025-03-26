@@ -1,16 +1,52 @@
 package asha9236.example;
 
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args)  {
+//BASE DATA/////////////////////////////////////////////////////////////////////////////////////////////////////////////
         Tree fileSystem = new Tree();
 
-        //CONSOLE APP///////////////////////////////////////////////////////////////////////////////////////////////////
+        fileSystem.insertData(new Log("John Doe", "random message"));
+        fileSystem.insertData(new Log("Jane Smith", "Everything is running smoothly."));
+        fileSystem.insertData(new Log("Alice Johnson", "Detected minor fluctuations in power supply."));
+        fileSystem.insertData(new Log("Bob Brown", "Performing routine maintenance on engine systems."));
+        fileSystem.insertData(new Log("Charlie Davis", "Initiating communication with ground control."));
+        fileSystem.insertData(new Log("Diana Evans", "Completed system diagnostics, all systems nominal."));
+        fileSystem.insertData(new Log("Ethan Harris", "Preparing for scheduled spacewalk."));
+        fileSystem.insertData(new Log("Fiona Clark", "Monitoring external temperature changes."));
+        fileSystem.insertData(new Log("George Lewis", "Adjusting life support systems for optimal performance."));
+        fileSystem.insertData(new Log("Hannah Walker", "Recording astronomical data from telescope."));
+        fileSystem.insertData(new Log("Ian Hall", "Reviewing navigation coordinates for next maneuver."));
+        fileSystem.insertData(new Log("John Doe", "random message"));
+
+        fileSystem.insertData(new Sensor("25"));
+        fileSystem.insertData(new Sensor("22"));
+        fileSystem.insertData(new Sensor("24"));
+        fileSystem.insertData(new Sensor("23"));
+        fileSystem.insertData(new Sensor("26"));
+        fileSystem.insertData(new Sensor("21"));
+        fileSystem.insertData(new Sensor("27"));
+        fileSystem.insertData(new Sensor("20"));
+        fileSystem.insertData(new Sensor("28"));
+        fileSystem.insertData(new Sensor("19"));
+        fileSystem.insertData(new Sensor("29"));
+
+        fileSystem.insertData(new Telemetry("95"));
+        fileSystem.insertData(new Telemetry("96"));
+        fileSystem.insertData(new Telemetry("94"));
+        fileSystem.insertData(new Telemetry("97"));
+        fileSystem.insertData(new Telemetry("93"));
+        fileSystem.insertData(new Telemetry("98"));
+        fileSystem.insertData(new Telemetry("92"));
+        fileSystem.insertData(new Telemetry("99"));
+        fileSystem.insertData(new Telemetry("91"));
+        fileSystem.insertData(new Telemetry("100"));
+        fileSystem.insertData(new Telemetry("90"));
+
+        fileSystem.printTree();
+
+//CONSOLE APP///////////////////////////////////////////////////////////////////////////////////////////////////////////
         int userAns;
         Scanner console = new Scanner(System.in);
         menu();

@@ -24,9 +24,9 @@ public class Tree {
 
         for (int i = 0; i < 3; i++) { //goes to 3 to not waste space : yyyy.mm.dd
             String idPart = idParts[i];
-            TreeNode child = current.getChildNode(idPart);
+            TreeNode child = current;
 
-            if (child == null) { //if the branch node(s) does not exist, create it
+            if (current.getChildNode(idPart) == null) { //if the branch node(s) does not exist, create it
                 child = new BranchNode(idPart);
                 current.addChild(child);
             }

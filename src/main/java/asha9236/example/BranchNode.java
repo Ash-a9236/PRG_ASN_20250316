@@ -55,6 +55,10 @@ public class BranchNode extends TreeNode {
      * @return the child node
      */
     public TreeNode getChildNode (String value) {
+        if (value == null) {
+            return null;
+        }
+
         for (TreeNode child : children) {
             if (child.value.equals(value)) {
                 return child;
